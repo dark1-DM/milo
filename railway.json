@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "build": {
+    "command": "npm run build:all"
+  },
+  "start": {
+    "command": "npm run prod"
+  },
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "healthcheck": {
+    "path": "/api/health",
+    "port": 8000
+  },
+  "domains": [
+    "metric-panel.com"
+  ]
+}

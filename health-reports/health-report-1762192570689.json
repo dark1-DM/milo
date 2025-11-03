@@ -1,0 +1,56 @@
+{
+  "timestamp": "2025-11-03T17:56:10.517Z",
+  "overall": {
+    "status": "critical",
+    "healthy": 2,
+    "warning": 0,
+    "error": 2,
+    "total": 4
+  },
+  "services": [
+    {
+      "name": "Frontend",
+      "type": "http",
+      "status": "error",
+      "responseTime": 61,
+      "error": "",
+      "details": {},
+      "timestamp": "2025-11-03T17:56:06.935Z"
+    },
+    {
+      "name": "Backend API",
+      "type": "http",
+      "status": "error",
+      "responseTime": 35,
+      "error": "",
+      "details": {},
+      "timestamp": "2025-11-03T17:56:06.962Z"
+    },
+    {
+      "name": "Discord Bot",
+      "type": "process",
+      "status": "healthy",
+      "responseTime": 373,
+      "error": null,
+      "details": {
+        "processFound": true
+      },
+      "timestamp": "2025-11-03T17:56:06.978Z"
+    },
+    {
+      "name": "Database",
+      "type": "mongodb",
+      "status": "healthy",
+      "responseTime": 3553,
+      "error": null,
+      "details": {
+        "connection": "successful"
+      },
+      "timestamp": "2025-11-03T17:56:06.963Z"
+    }
+  ],
+  "summary": {
+    "uptime": 50,
+    "averageResponseTime": 1006
+  }
+}

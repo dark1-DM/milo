@@ -1,0 +1,68 @@
+{
+  "name": "milo-backend",
+  "version": "1.0.0",
+  "description": "Milo - Backend API Server",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "prod": "NODE_ENV=production node index.js",
+    "test": "jest",
+    "lint": "eslint . --ext .js",
+    "lint:fix": "eslint . --ext .js --fix"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "api",
+    "backend",
+    "express",
+    "nodejs"
+  ],
+  "author": "Discord Bot Dashboard Team",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "dotenv": "^16.3.1",
+    "mongoose": "^8.0.3",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "passport": "^0.7.0",
+    "passport-discord": "^0.1.4",
+    "express-session": "^1.17.3",
+    "connect-mongo": "^5.1.0",
+    "express-rate-limit": "^7.1.5",
+    "express-validator": "^7.0.1",
+    "socket.io": "^4.7.4",
+    "stripe": "^14.9.0",
+    "axios": "^1.6.2",
+    "winston": "^3.11.0",
+    "moment": "^2.29.4",
+    "sharp": "^0.33.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.7",
+    "discord.js": "^14.14.1",
+    "@discordjs/voice": "^0.16.1",
+    "ytdl-core": "^4.11.5",
+    "play-dl": "^1.9.7",
+    "canvas": "^2.11.2",
+    "discord-player": "^6.6.6",
+    "node-cron": "^3.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "jest": "^29.7.0",
+    "supertest": "^6.3.3",
+    "eslint": "^8.55.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/discord-bot-backend.git"
+  }
+}

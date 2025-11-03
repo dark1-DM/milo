@@ -1,0 +1,40 @@
+# Environment Variables Template for Milo Discord Bot Dashboard
+# Copy this file and replace with your actual values
+# DO NOT commit the actual values to GitHub!
+
+NODE_ENV=production
+PORT=8000
+
+# Database
+MONGODB_URI=your_mongodb_connection_string_here
+
+# Discord Bot Configuration
+DISCORD_TOKEN=your_discord_bot_token_here
+DISCORD_CLIENT_ID=your_discord_client_id_here
+DISCORD_CLIENT_SECRET=your_discord_client_secret_here
+
+# JWT & Authentication
+JWT_SECRET=your_jwt_secret_key_here
+SESSION_SECRET=your_session_secret_key_here
+
+# CORS Configuration
+ALLOWED_ORIGINS=https://metric-panel.com,http://localhost:3000
+
+# OAuth Configuration
+DISCORD_CALLBACK_URL=https://metric-panel.com/auth/discord/callback
+DISCORD_REDIRECT_URI=https://metric-panel.com/auth/discord/callback
+
+# Cloudflare Configuration
+CLOUDFLARE_ZONE_ID=your_cloudflare_zone_id_here
+CLOUDFLARE_ACCOUNT_ID=your_cloudflare_account_id_here
+CLOUDFLARE_API_TOKEN=your_cloudflare_api_token_here
+
+# Frontend URLs (for production)
+REACT_APP_API_URL=https://metric-panel.com/api
+REACT_APP_WEBSOCKET_URL=wss://metric-panel.com
+REACT_APP_FRONTEND_URL=https://metric-panel.com
+REACT_APP_ENVIRONMENT=production
+
+# Discord Configuration for Frontend
+REACT_APP_DISCORD_CLIENT_ID=your_discord_client_id_here
+REACT_APP_DISCORD_REDIRECT_URI=https://metric-panel.com/auth/discord/callback

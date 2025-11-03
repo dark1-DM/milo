@@ -1,0 +1,72 @@
+{
+  "timestamp": "2025-11-03T18:25:56.405Z",
+  "overall": {
+    "status": "critical",
+    "healthy": 3,
+    "warning": 0,
+    "error": 1,
+    "total": 4
+  },
+  "services": [
+    {
+      "name": "Backend API",
+      "type": "http",
+      "status": "error",
+      "responseTime": 27,
+      "error": "",
+      "details": {},
+      "timestamp": "2025-11-03T18:25:55.145Z"
+    },
+    {
+      "name": "Frontend",
+      "type": "http",
+      "status": "healthy",
+      "responseTime": 47,
+      "error": null,
+      "details": {
+        "statusCode": 200,
+        "headers": {
+          "x-powered-by": "Express",
+          "access-control-allow-origin": "*",
+          "access-control-allow-methods": "*",
+          "access-control-allow-headers": "*",
+          "content-type": "text/html; charset=utf-8",
+          "accept-ranges": "bytes",
+          "content-length": "1711",
+          "etag": "W/\"6af-+M4OSPFNZpwKBdFEydrj+1+V5xo\"",
+          "vary": "Accept-Encoding",
+          "date": "Mon, 03 Nov 2025 18:25:55 GMT",
+          "connection": "keep-alive",
+          "keep-alive": "timeout=5"
+        }
+      },
+      "timestamp": "2025-11-03T18:25:55.129Z"
+    },
+    {
+      "name": "Discord Bot",
+      "type": "process",
+      "status": "healthy",
+      "responseTime": 368,
+      "error": null,
+      "details": {
+        "processFound": true
+      },
+      "timestamp": "2025-11-03T18:25:55.156Z"
+    },
+    {
+      "name": "Database",
+      "type": "mongodb",
+      "status": "healthy",
+      "responseTime": 1260,
+      "error": null,
+      "details": {
+        "connection": "successful"
+      },
+      "timestamp": "2025-11-03T18:25:55.145Z"
+    }
+  ],
+  "summary": {
+    "uptime": 75,
+    "averageResponseTime": 426
+  }
+}

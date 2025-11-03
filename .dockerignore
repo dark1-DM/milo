@@ -1,0 +1,45 @@
+# Production deployment files
+.env.production.local
+.env.local
+
+# Logs
+logs/
+*.log
+
+# Database dumps
+backup/
+dumps/
+
+# SSL certificates (store separately)
+ssl/
+*.pem
+*.key
+*.crt
+
+# PM2 files
+.pm2/
+
+# Temporary files
+tmp/
+temp/
+
+# Build artifacts
+frontend/build/
+
+# Docker volumes
+mongodb_data/
+redis_data/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/settings.json
+.idea/
+
+# Runtime files
+pids/
+*.pid
+*.seed
+*.pid.lock

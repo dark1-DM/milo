@@ -1,0 +1,77 @@
+name: milo-discord-dashboard
+services:
+- name: backend
+  source_dir: /backend
+  github:
+    repo: your-username/discord-bot-dashboard
+    branch: main
+  run_command: npm start
+  environment_slug: node-js
+  instance_count: 1
+  instance_size_slug: basic-xxs
+  http_port: 8000
+  routes:
+  - path: /api
+  envs:
+  - key: NODE_ENV
+    value: production
+  - key: PORT
+    value: "8000"
+  - key: MONGODB_URI
+    value: ${MONGODB_URI}
+  - key: DISCORD_TOKEN
+    value: ${DISCORD_TOKEN}
+  - key: DISCORD_CLIENT_ID
+    value: ${DISCORD_CLIENT_ID}
+  - key: DISCORD_CLIENT_SECRET
+    value: ${DISCORD_CLIENT_SECRET}
+  - key: JWT_SECRET
+    value: milo_super_secure_jwt_secret_key_2024_discord_bot_dashboard_project
+  - key: SESSION_SECRET
+    value: milo_session_secret_key_for_express_sessions_security_2024
+  - key: ALLOWED_ORIGINS
+    value: https://metric-panel.com,http://localhost:3000
+  - key: DISCORD_CALLBACK_URL
+    value: https://metric-panel.com/auth/discord/callback
+  - key: DISCORD_REDIRECT_URI
+    value: https://metric-panel.com/auth/discord/callback
+  - key: CLOUDFLARE_ZONE_ID
+    value: ${CLOUDFLARE_ZONE_ID}
+  - key: CLOUDFLARE_ACCOUNT_ID
+    value: ${CLOUDFLARE_ACCOUNT_ID}
+  - key: CLOUDFLARE_API_TOKEN
+    value: ${CLOUDFLARE_API_TOKEN}
+
+static_sites:
+- name: frontend
+  source_dir: /frontend
+  github:
+    repo: your-username/discord-bot-dashboard
+    branch: main
+  build_command: npm run build
+  output_dir: /build
+  routes:
+  - path: /
+  envs:
+  - key: REACT_APP_API_URL
+    value: https://metric-panel.com/api
+  - key: REACT_APP_WEBSOCKET_URL
+    value: wss://metric-panel.com
+  - key: REACT_APP_FRONTEND_URL
+    value: https://metric-panel.com
+  - key: REACT_APP_ENVIRONMENT
+    value: production
+  - key: REACT_APP_DISCORD_CLIENT_ID
+    value: "1434964252678029556"
+  - key: REACT_APP_DISCORD_REDIRECT_URI
+    value: https://metric-panel.com/auth/discord/callback
+  - key: REACT_APP_CLOUDFLARE_ZONE_ID
+    value: 7d214bdee36b27de5a16dadbf385fec6
+  - key: REACT_APP_CLOUDFLARE_ACCOUNT_ID
+    value: 86d1db260ccffef0e4ec59733b484ec8
+  - key: REACT_APP_CLOUDFLARE_API_TOKEN
+    value: HFExnM_D0JgYvI-p4lbic5lp14zCXs6zfn37pXmZ
+
+domains:
+- domain: metric-panel.com
+  type: PRIMARY
