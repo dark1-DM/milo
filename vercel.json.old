@@ -1,0 +1,32 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build:frontend",
+  "outputDirectory": "frontend/build",
+  "framework": "create-react-app",
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "functions": {
+    "backend/api/*.js": {
+      "runtime": "@vercel/node"
+    }
+  },
+  "env": {
+    "NODE_ENV": "production",
+    "REACT_APP_API_URL": "https://metric-panel.com/api",
+    "REACT_APP_WEBSOCKET_URL": "wss://metric-panel.com",
+    "REACT_APP_FRONTEND_URL": "https://metric-panel.com",
+    "REACT_APP_ENVIRONMENT": "production",
+    "CLOUDFLARE_API_TOKEN": "HFExnM_D0JgYvI-p4lbic5lp14zCXs6zfn37pXmZ",
+    "CLOUDFLARE_ZONE_ID": "7d214bdee36b27de5a16dadbf385fec6"
+  },
+  "installCommand": "npm install --legacy-peer-deps",
+  "ignoreCommand": "npx turbo-ignore"
+}
