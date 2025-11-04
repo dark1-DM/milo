@@ -36,10 +36,12 @@
     "express-rate-limit": "^7.1.5",
     "express-validator": "^7.0.1",
     "socket.io": "^4.7.4",
-    "stripe": "^14.9.0",
     "axios": "^1.6.2",
     "winston": "^3.11.0",
     "moment": "^2.29.4",
+    "node-cron": "^3.0.3"
+  },
+  "optionalDependencies": {
     "sharp": "^0.33.0",
     "multer": "^1.4.5-lts.1",
     "nodemailer": "^6.9.7",
@@ -49,7 +51,7 @@
     "play-dl": "^1.9.7",
     "canvas": "^2.11.2",
     "discord-player": "^6.6.6",
-    "node-cron": "^3.0.3"
+    "stripe": "^14.9.0"
   },
   "devDependencies": {
     "nodemon": "^3.0.2",
