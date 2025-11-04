@@ -36,7 +36,7 @@ class MainServer {
                 methods: ["GET", "POST", "PUT", "DELETE"]
             }
         });
-        this.port = process.env.SERVER_PORT || 8000;
+        this.port = process.env.PORT || process.env.SERVER_PORT || 8000;
     }
 
     async initialize() {
@@ -218,9 +218,10 @@ class MainServer {
     }
 
     start() {
-        this.server.listen(this.port, () => {
-            console.log(`🌐 Main server running on port ${this.port}`);
-            console.log(`📊 Dashboard: ${process.env.FRONTEND_URL || `http://localhost:${this.port}`}`);
+        const host = process.env.NODE_ENV === 'production' ? '0.0.0.0' : 'localhost';
+        this.server.listen(this.port, host, () => {
+            console.log(`🌐 Main server running on ${host}:${this.port}`);
+            console.log(`📊 Dashboard: ${process.env.FRONTEND_URL || `http://${host}:${this.port}`}`);
         });
     }
 
