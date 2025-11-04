@@ -39,19 +39,8 @@
     "axios": "^1.6.2",
     "winston": "^3.11.0",
     "moment": "^2.29.4",
-    "node-cron": "^3.0.3"
-  },
-  "optionalDependencies": {
-    "sharp": "^0.33.0",
-    "multer": "^1.4.5-lts.1",
-    "nodemailer": "^6.9.7",
-    "discord.js": "^14.14.1",
-    "@discordjs/voice": "^0.16.1",
-    "ytdl-core": "^4.11.5",
-    "play-dl": "^1.9.7",
-    "canvas": "^2.11.2",
-    "discord-player": "^6.6.6",
-    "stripe": "^14.9.0"
+    "node-cron": "^3.0.3",
+    "discord.js": "^14.14.1"
   },
   "devDependencies": {
     "nodemon": "^3.0.2",
