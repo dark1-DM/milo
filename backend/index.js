@@ -92,7 +92,8 @@ class MainServer {
         this.app.use(cors({
             origin: [
                 process.env.FRONTEND_URL || 'http://localhost:3000',
-                process.env.BOT_DASHBOARD_URL || 'http://localhost:3001'
+                process.env.BOT_DASHBOARD_URL || 'http://localhost:3001',
+                'https://milo-frontend-new.onrender.com'  // Add your frontend URL
             ],
             credentials: true
         }));
