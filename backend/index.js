@@ -154,6 +154,15 @@ class MainServer {
         // this.app.get('*', (req, res) => {
         //     res.sendFile(path.join(__dirname, '../frontend/build/index.html'));
         // });
+
+        // API-only catch-all route - return 404 for non-API requests
+        this.app.get('*', (req, res) => {
+            res.status(404).json({
+                error: 'Not Found',
+                message: 'This is an API-only server. Frontend is deployed separately.',
+                path: req.path
+            });
+        });
     }
 
     setupSocketIO() {
