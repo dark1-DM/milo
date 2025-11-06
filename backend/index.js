@@ -120,8 +120,8 @@ class MainServer {
         this.app.use(passport.initialize());
         this.app.use(passport.session());
 
-        // Static files
-        this.app.use(express.static(path.join(__dirname, '../frontend/build')));
+        // Static files - Commented out for separate frontend deployment
+        // this.app.use(express.static(path.join(__dirname, '../frontend/build')));
     }
 
     setupPassport() {
@@ -149,10 +149,10 @@ class MainServer {
             });
         });
 
-        // Serve React app for all other routes
-        this.app.get('*', (req, res) => {
-            res.sendFile(path.join(__dirname, '../frontend/build/index.html'));
-        });
+        // Serve React app for all other routes - Commented out for separate frontend deployment
+        // this.app.get('*', (req, res) => {
+        //     res.sendFile(path.join(__dirname, '../frontend/build/index.html'));
+        // });
     }
 
     setupSocketIO() {
